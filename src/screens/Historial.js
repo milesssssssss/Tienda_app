@@ -33,7 +33,7 @@ const HistorialPedidos = () => {
 
     const loadPedidos = async () => {
         try {
-            const response = await fetch(`${ip}/T.Booksadre/api/services/public/pedido.php?action=getHistory`);
+            const response = await fetch(`${ip}/Tienda/T.Booksadre/api/services/public/pedido.php?action=getHistory`);
             const result = await response.json();
             if (result.status) {
                 setPedidos(result.dataset);
@@ -48,7 +48,7 @@ const HistorialPedidos = () => {
 
     const loadProductosComprados = async () => {
         try {
-            const response = await fetch(`${ip}/T.Booksadre/api/services/public/pedido.php?action=getProductosComprados`);
+            const response = await fetch(`${ip}/Tienda/T.Booksadre/api/services/public/pedido.php?action=getProductosComprados`);
             const result = await response.json();
             if (result.status) {
                 setProductosComprados(result.dataset);
@@ -79,7 +79,7 @@ const HistorialPedidos = () => {
         formData.append('comentarioValoracion', comentario);
 
         try {
-            const response = await fetch(`${ip}/T.Booksadre/api/services/public/pedido.php?action=createValoracion`, {
+            const response = await fetch(`${ip}/Tienda/T.Booksadre/api/services/public/pedido.php?action=createValoracion`, {
                 method: 'POST',
                 body: formData,
             });

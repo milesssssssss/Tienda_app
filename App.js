@@ -9,6 +9,8 @@ import Carga from './src/screens/carga.js'
 import Productos from './src/screens/Productos.js';
 import Carrito from './src/screens/Carrito.js';
 import TabNavigator from './src/tabNavigator/TabNavigator.js';
+import RecuperarContrasena from './src/screens/recuperacion.js';
+
 
 export default function App() {
 
@@ -26,6 +28,7 @@ export default function App() {
         }}>
         <Stack.Screen name="Sesion" component={Sesion} />
         <Stack.Screen name="SignUp" component={SignUp} />
+        <Stack.Screen name="Recovery" component={RecuperarContrasena} />
         <Stack.Screen name="UpdateUser" component={UpdateUser} />
         <Stack.Screen name="carga" component={Carga} options={{ headerShown: false }} />
         <Stack.Screen name="TabNavigator" component={TabNavigator} />

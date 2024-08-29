@@ -69,7 +69,7 @@ export default function SignUp({ navigation }) {
     const handleLogout = async () => {
         /*
                 try {
-                    const response = await fetch(`${ip/Tienda/T.Booksadre/api/services/public/cliente.php?action=logOut`, {
+                    const response = await fetch(`${ip/T.Booksadre/api/services/public/cliente.php?action=logOut`, {
                         method: 'GET'
                     });
         
@@ -133,7 +133,7 @@ export default function SignUp({ navigation }) {
 
             const data = await response.json();
             if (data.status) {
-                Alert.alert('Datos Guardados correctamente');
+                Alert.alert(`${data.message}`);
                 navigation.navigate('Sesion');
             } else {
                 Alert.alert('Error', data.error);
